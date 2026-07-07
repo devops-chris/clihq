@@ -7,10 +7,10 @@ import (
 )
 
 var (
-	checkPassStyle = lipgloss.NewStyle().Bold(true).Foreground(colorGreen)
-	checkFailStyle = lipgloss.NewStyle().Bold(true).Foreground(colorRed)
-	checkWarnStyle = lipgloss.NewStyle().Bold(true).Foreground(colorYellow)
-	checkHintStyle = lipgloss.NewStyle().Foreground(colorMuted).PaddingLeft(6)
+	checkPassStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorGreen)
+	checkFailStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorRed)
+	checkWarnStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorYellow)
+	checkHintStyle = lipgloss.NewStyle().Foreground(ColorMuted).PaddingLeft(6)
 )
 
 // CheckPass renders a passing "doctor"-style check line.

@@ -10,47 +10,50 @@ import (
 	"github.com/charmbracelet/lipgloss"
 )
 
+// Raw palette colors, exported for building bespoke lipgloss.Style values
+// (e.g. custom per-column table styling) that still match the shared palette
+// instead of hardcoding hex values.
 var (
-	colorPurple = lipgloss.AdaptiveColor{Light: "#874BFD", Dark: "#7D56F4"}
-	colorGreen  = lipgloss.AdaptiveColor{Light: "#43BF6D", Dark: "#73F59F"}
-	colorRed    = lipgloss.AdaptiveColor{Light: "#D0342C", Dark: "#FF4672"}
-	colorYellow = lipgloss.AdaptiveColor{Light: "#A07A10", Dark: "#FFCC66"}
-	colorMuted  = lipgloss.AdaptiveColor{Light: "#9B9B9B", Dark: "#5C5C5C"}
-	colorCyan   = lipgloss.AdaptiveColor{Light: "#0097A7", Dark: "#4DD0E1"}
+	ColorPurple = lipgloss.AdaptiveColor{Light: "#874BFD", Dark: "#7D56F4"}
+	ColorGreen  = lipgloss.AdaptiveColor{Light: "#43BF6D", Dark: "#73F59F"}
+	ColorRed    = lipgloss.AdaptiveColor{Light: "#D0342C", Dark: "#FF4672"}
+	ColorYellow = lipgloss.AdaptiveColor{Light: "#A07A10", Dark: "#FFCC66"}
+	ColorMuted  = lipgloss.AdaptiveColor{Light: "#9B9B9B", Dark: "#5C5C5C"}
+	ColorCyan   = lipgloss.AdaptiveColor{Light: "#0097A7", Dark: "#4DD0E1"}
 
-	successStyle   = lipgloss.NewStyle().Foreground(colorGreen).Bold(true)
-	errorStyle     = lipgloss.NewStyle().Foreground(colorRed).Bold(true)
-	warningStyle   = lipgloss.NewStyle().Foreground(colorYellow).Bold(true)
-	infoStyle      = lipgloss.NewStyle().Foreground(colorPurple).Bold(true)
-	subtleStyle    = lipgloss.NewStyle().Foreground(colorMuted)
-	highlightStyle = lipgloss.NewStyle().Foreground(colorPurple).Bold(true)
-	greenStyle     = lipgloss.NewStyle().Foreground(colorGreen)
-	yellowStyle    = lipgloss.NewStyle().Foreground(colorYellow)
-	redStyle       = lipgloss.NewStyle().Foreground(colorRed)
-	cyanStyle      = lipgloss.NewStyle().Foreground(colorCyan)
+	successStyle   = lipgloss.NewStyle().Foreground(ColorGreen).Bold(true)
+	errorStyle     = lipgloss.NewStyle().Foreground(ColorRed).Bold(true)
+	warningStyle   = lipgloss.NewStyle().Foreground(ColorYellow).Bold(true)
+	infoStyle      = lipgloss.NewStyle().Foreground(ColorPurple).Bold(true)
+	subtleStyle    = lipgloss.NewStyle().Foreground(ColorMuted)
+	highlightStyle = lipgloss.NewStyle().Foreground(ColorPurple).Bold(true)
+	greenStyle     = lipgloss.NewStyle().Foreground(ColorGreen)
+	yellowStyle    = lipgloss.NewStyle().Foreground(ColorYellow)
+	redStyle       = lipgloss.NewStyle().Foreground(ColorRed)
+	cyanStyle      = lipgloss.NewStyle().Foreground(ColorCyan)
 
 	bannerStyle = lipgloss.NewStyle().
 			Border(lipgloss.RoundedBorder()).
-			BorderForeground(colorPurple).
+			BorderForeground(ColorPurple).
 			Padding(1, 3).
 			Width(52)
 
 	bannerTitleStyle = lipgloss.NewStyle().
 				Bold(true).
-				Foreground(colorPurple)
+				Foreground(ColorPurple)
 
 	bannerSubtitleStyle = lipgloss.NewStyle().
 				Faint(true)
 
-	sectionStyle = lipgloss.NewStyle().Bold(true).Foreground(colorPurple)
+	sectionStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorPurple)
 
-	pickerCategoryStyle = lipgloss.NewStyle().Bold(true).Foreground(colorPurple)
+	pickerCategoryStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorPurple)
 	pickerNameStyle     = lipgloss.NewStyle().Bold(true)
 
 	// TableHeaderStyle is exported for use in table renderers.
-	TableHeaderStyle = lipgloss.NewStyle().Bold(true).Foreground(colorPurple)
+	TableHeaderStyle = lipgloss.NewStyle().Bold(true).Foreground(ColorPurple)
 	// TableBorderStyle is exported for use in table renderers.
-	TableBorderStyle = lipgloss.NewStyle().Foreground(colorMuted)
+	TableBorderStyle = lipgloss.NewStyle().Foreground(ColorMuted)
 )
 
 // Banner renders an app identity box: bold title, faint subtitle, rounded
